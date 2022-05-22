@@ -1,0 +1,18 @@
+/*for cpsTest Button*/
+.button { position: relative; background-color: #1F85DE; border: none; font-size: 28px; color: #FFFFFF; padding: 20px; width: 200px; text-align: center; -webkit-transition-duration: 0.4s; /* Safari */ transition-duration: 0.4s; text-decoration: none; overflow: hidden; cursor: pointer;}
+.button:after { content: ""; background: #DE781F; display: block; position: absolute; padding-top: 300%; padding-left: 350%; margin-left: -20px!important; margin-top: -120%; opacity: 0; transition: all 0.8s}
+.button:active:after { padding: 0; margin: 0; opacity: 1; transition: 0s}
+* { padding: 0; margin: 0;}
+/*for most canvases*/
+#myCanvas { background: #eee; display: block; margin: 0 auto; }
+.txt {
+text-align:center;
+}
+body {background-color:#1FDED8; font-family:futura; }
+p, h1, h2, h3, h4, h5, h6, body, div, button, a{
+	/*font-size:20px;*/
+	text-align:center;
+	color:#DE781F;
+	
+}
+#button{size:400px;white-space:nowrap;}
