@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="us-ascii"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rock, Paper, Scissors!!!</title>
+	<link href="DONT_LOOK_HERE_RANDOM_FILES/totallynotagamecss.css" rel="stylesheet" /><link rel="icon" href="/favicon.jpg">
+	<style type="text/css">div, input, label, h2{font-size:25px}
+button{font-size:25px}
+h1{font-size:45px}
+	</style>
+	
+	<script>
+var rockChecked = false;
+var paperChecked = false;
+var scissorsChecked = false;
+var opponentchecked = 0;
+function play(){
+document.getElementById("hideable").style.display = "none";
+rockChecked = false;
+paperChecked = false;
+scissorsChecked = false;
+if (document.getElementById("rock").checked===true){rockChecked=true;}
+else if (document.getElementById("paper").checked===true){paperChecked=true;}
+else if (document.getElementById("scissors").checked===true){scissorsChecked=true;}
+else{alert("ERROR: INVALID ENTRY");window.location.reload();}
+document.getElementById("afterGame").style.display="block";
+opponentchecked=Math.ceil(Math.random()*3)
+if (opponentchecked===1&&rockChecked===true){document.getElementById("result").innerHTML = "Congrats, you win! You played rock and the opponent played scissors";}
+else if (opponentchecked===2&&paperChecked===true){document.getElementById("result").innerHTML = "Congrats, you win! You played paper and the opponent played rock";}
+else if (opponentchecked===3&&scissorsChecked===true){document.getElementById("result").innerHTML = "Congrats, you win! You played scissors and the opponent played paper";}
+else if (opponentchecked===2&&rockChecked===true){document.getElementById("result").innerHTML = "You tied... Both you and the opponent played rock"}
+else if (opponentchecked===3&&paperChecked===true){document.getElementById("result").innerHTML = "You tied... Both you and the opponent played paper"}
+else if (opponentchecked===1&&scissorsChecked===true){document.getElementById("result").innerHTML = "You tied... Both you and the opponent played scissors"}
+else{document.getElementById("result").innerHTML = "HAHAHA you lost lol";}
+}
+</script>
+
+</head>
+<body>
+    <div id="div">
+        <h1>Rock, Paper, Scissors</h1>
+<h2>Coded by Jimmy the Great</h2>
+<h3>Choose an option and await your result! (does this go<br />
+in the dumb ideas section? it seems like one to me XD)</h3>
+<br />
+<div id="hideable">
+<p>SELECT BELOW:</p>
+
+<div class="inputs"><input id="rock" name="RPS" type="radio" value="ROCK" /><label for="rock">ROCK</label><br />
+<input id="paper" name="RPS" type="radio" value="PAPER" /><label for="paper">PAPER</label><br />
+<input id="scissors" name="RPS" type="radio" value="SCISSORS" /><label for="scissors">SCISSORS</label></div>
+<button id="PLAY" onclick="play()">PLAY!!!</button></div>
+
+<div id="afterGame" style="display:none;">
+<p>YOUR RESULT:</p>
+
+<p id="result"></p>
+<button onclick="document.location.reload()">PLAY AGAIN</button></div>
+</div>
+<script src="swapper.js" defer></script>
+</body>
+</html>
