@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><link rel="stylesheet" href="DONT_LOOK_HERE_RANDOM_FILES/totallynotagamecss.css"><title id="Title">CPS Test</title><link rel="icon" href="/favicon.jpg"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="test to see how fast you click"><meta name="keywords" content="test, learning, school, tech"><meta name="author" content="JimmyTheGreat100"><script src="swapper.js" defer></script>
+</head>
+<body>
+    <div id="div">
+    <h1>CPS test V1.2</h1>
+    <h2>By Jimmy the great</h2>
+    <p>Timer Starts on Your First Click</p>
+    <p>Unfortunately, this <i>test</i> is unavailable in Internet Explorer</p>
+<p id="scorekeeping">Score:---</p><p id="timer">Time Remaining: ___</p><br /><button id="button"class="button" onclick="jimmysaysopensesame();">START</button>
+<h3>Change Log:</h3><h4>1.0--released cps test<br />1.1--made timer start on first click<br />1.2--gave players rankings based on how fast they clicked</h4>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    var score = 0;function clock(){var countDownDate = new Date().getTime()+5000;var x = setInterval(function() {let seconds = Math.floor((distance % (1000 * 60)) / 1000);var now = new Date().getTime();var distance = countDownDate - now;$("#timer").text("Time Remaining: "+ Math.round((distance % (100 * 60) / 1000)*10)/10 + " seconds");if (distance < 0) {clearInterval(x);if(score<10){if (Math.random()>.5){alert("Did you even try???");}else{alert("You are a snail");}}else if(score<20){alert("You are a bat...");}else if(score<30){alert("You are a moose!!!");}else if(score<35){alert("You are a fox!!!");}else if(score<40){alert("You are an elk!!!");}else if(score<50){if (Math.random()>.5){alert("You are a godly clicker");}else{alert("You are a cheetah");}}else {alert("Hacker.");}alert("Score: " + score + " CPS: " + score/5);window.location.reload();}}, 100);}
+    function jimmysaysopensesame() {if (score==0){clock();$("button").html("CLICK<lbr />!!!!!!!!!");}score++;document.getElementById("scorekeeping").innerHTML = "Your score is: " + score;document.title="CPS Test - "+score+" clicks";}
+</script>
+</div></body></html>

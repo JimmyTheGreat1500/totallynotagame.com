@@ -1,0 +1,19 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^http://totallynotagame.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://totallynotagame.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.totallynotagame.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.totallynotagame.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://totallynotagame.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://totallynotagame.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.totallynotagame.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.totallynotagame.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+ErrorDocument 404 /not-found-page.html
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74___lsphp .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
